@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Packages
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+
+# Zip artifacts
+*.zip
+*.crx
+*.pem

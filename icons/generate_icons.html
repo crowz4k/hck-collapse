@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Right-click each image and "Save image as" to save the icons:</p>
+<p>icon16.png:</p><canvas id="c16" width="16" height="16"></canvas>
+<p>icon48.png:</p><canvas id="c48" width="48" height="48"></canvas>
+<p>icon128.png:</p><canvas id="c128" width="128" height="128"></canvas>
+<script>
+function drawIcon(id, size) {
+  const c = document.getElementById(id);
+  const ctx = c.getContext('2d');
+  // Orange background (HN color)
+  ctx.fillStyle = '#ff6600';
+  ctx.fillRect(0, 0, size, size);
+  // White collapse arrows
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold ${size * 0.45}px sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('[–]', size / 2, size / 2);
+}
+drawIcon('c16', 16);
+drawIcon('c48', 48);
+drawIcon('c128', 128);
+</script>
+</body>
+</html>
